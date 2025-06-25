@@ -1,27 +1,44 @@
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Header Section */
+html, body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
 .header {
   min-height: 100vh;
-  width: 100%;
-  background: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), 
+  background: linear-gradient(rgba(4,9,30,0.6), rgba(4,9,30,0.6)),
               url('badminton-white-badminton-shuttlecock-lot-wallpaper-preview.jpg') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #fff;
   position: relative;
 }
 
-nav {
+.navbar {
   display: flex;
-  padding: 2% 6%;
   justify-content: space-between;
   align-items: center;
+  padding: 20px 6%;
+  position: relative;
+  z-index: 1000;
 }
 
-nav img {
+.navbar .logo img {
   width: 60px;
 }
 
@@ -36,268 +53,187 @@ nav img {
 
 .nav-links ul li {
   display: inline-block;
-  padding: 8px 16px;
+  margin-left: 24px;
   position: relative;
 }
 
 .nav-links ul li a {
   color: #fff;
   text-decoration: none;
-  font-size: 14px;
-  transition: color 0.3s ease;
+  font-size: 16px;
+  transition: color 0.3s;
 }
 
 .nav-links ul li::after {
   content: "";
-  width: 0%;
   height: 2px;
+  width: 0;
   background: #f44336;
-  display: block;
-  margin: auto;
-  transition: 0.3s ease;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: width 0.3s ease;
 }
 
 .nav-links ul li:hover::after {
   width: 100%;
 }
 
-.text-box {
-  width: 90%;
+.fa-bars, .fa-times {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
   color: #fff;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+}
+.text-box {
   text-align: center;
+  padding: 80px 20px;
+  margin-top: auto;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .text-box h1 {
-  font-size: 64px;
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .text-box p {
-  margin: 10px 0 40px;
-  font-size: 16px;
+  font-size: 18px;
   color: #eee;
+  line-height: 1.6;
+  margin-bottom: 30px;
 }
 
 .hero-btn {
-  display: inline-block;
-  text-decoration: none;
-  color: #fff;
-  border: 1px solid #fff;
-  padding: 12px 34px;
-  font-size: 14px;
+  padding: 12px 36px;
   background: transparent;
-  transition: 0.5s;
-  border-radius: 4px;
+  border: 2px solid #fff;
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.3s ease;
 }
 
 .hero-btn:hover {
   background: #f44336;
-  border: 1px solid #f44336;
+  border-color: #f44336;
 }
-
-/* Mobile Nav Icon */
-nav .fa {
-  display: none;
-}
-
-@media (max-width: 768px) {
-  .text-box h1 {
-    font-size: 28px;
-  }
-
-  .nav-links {
-    position: absolute;
-    right: -250px;
-    top: 0;
-    background: #000;
-    height: 100vh;
-    width: 250px;
-    text-align: left;
-    transition: right 0.3s ease;
-    padding-top: 60px;
-    z-index: 999;
-  }
-
-  .nav-links ul li {
-    display: block;
-    padding: 12px;
-  }
-
-  nav .fa {
-    display: block;
-    font-size: 26px;
-    color: #fff;
-    cursor: pointer;
-    margin: 10px;
-  }
-}
-
-/* Section Styling */
-.course, .academy, .testimonials, .cta, .footer, .about-us, .location, .contact-us {
-  width: 85%;
-  margin: auto;
-  padding-top: 60px;
-  text-align: center;
+section {
+  padding: 60px 6%;
 }
 
 h1 {
-  font-size: 38px;
-  font-weight: 600;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 p {
-  color: #777;
   font-size: 16px;
-  font-weight: 300;
-  line-height: 24px;
-  padding: 12px;
+  line-height: 1.6;
+  color: #555;
 }
 
 .row {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
-  margin-top: 40px;
   gap: 20px;
+  justify-content: center;
 }
 
 .course-col, .academy-col, .testimonials-col {
-  flex: 1 1 calc(33% - 20px);
-  background: #fff3f3;
+  flex: 1 1 300px;
+  background: #fff;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
 }
 
 .course-col:hover, .testimonials-col:hover {
-  box-shadow: 0 0 25px rgba(0,0,0,0.1);
-}
-
-h3 {
-  margin-top: 10px;
-  font-weight: 600;
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
 .testimonials-col {
   display: flex;
   align-items: flex-start;
-  background: #fff3f3;
+  gap: 15px;
 }
 
 .testimonials-col img {
-  width: 50px;
-  height: 50px;
-  margin-right: 20px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
 }
 
-.cta {
-  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-              url('istockphoto-902905858-612x612.jpg') center/cover no-repeat;
-  padding: 100px 20px;
-  color: #fff;
-  border-radius: 10px;
-}
-
-.footer {
-  padding: 30px 0;
-}
-
-.footer h4 {
-  font-weight: 600;
-  margin-bottom: 20px;
-}
-
-.icons .fa {
+.stars i {
   color: #f44336;
+  margin-top: 5px;
+}
+.cta {
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+              url('istockphoto-902905858-612x612.jpg') center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+  border-radius: 12px;
+}
+
+.cta h1 {
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+.footer {
+  background-color: #222;
+  color: #ccc;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer .icons i {
   margin: 0 10px;
   font-size: 20px;
-  cursor: pointer;
-}
-
-/* About Page */
-.sub-header {
-  height: 50vh;
-  background: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), 
-              url('istockphoto-1033954336-612x612.jpg') center/cover no-repeat;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.about-col {
-  flex: 1 1 48%;
-  padding: 20px;
-}
-
-.about-col img {
-  width: 100%;
-  border-radius: 8px;
-}
-
-.comment-box {
-  border: 1px solid #ccc;
-  padding: 20px;
-  margin: 50px 0;
-  background: #fafafa;
-}
-
-.comment-box h3 {
-  text-align: left;
-  margin-bottom: 20px;
-}
-
-.comment-form input,
-.comment-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  background: #f0f0f0;
-  border: none;
-  border-radius: 4px;
-}
-
-.comment-form button {
-  margin-top: 10px;
-}
-
-.location iframe {
-  width: 100%;
-  border-radius: 10px;
-}
-
-.contact-col {
-  flex: 1 1 48%;
-  text-align: left;
-}
-
-.contact-col div {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.contact-col div .fa {
-  font-size: 24px;
   color: #f44336;
-  margin-right: 15px;
+  transition: transform 0.3s;
 }
 
-.contact-col input,
-.contact-col textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-bottom: 20px;
+.footer .icons i:hover {
+  transform: scale(1.2);
+}
+@media (max-width: 1024px) {
+  .text-box h1 {
+    font-size: 36px;
+  }
 }
 
-/* Media Queries */
 @media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    background: #000;
+    top: 0;
+    right: -250px;
+    height: 100vh;
+    width: 250px;
+    flex-direction: column;
+    padding-top: 60px;
+    transition: right 0.3s ease;
+  }
+
+  .nav-links ul li {
+    display: block;
+    margin: 20px;
+  }
+
+  .fa-bars, .fa-times {
+    display: block;
+  }
+
   .row {
     flex-direction: column;
   }
@@ -305,8 +241,25 @@ h3 {
   .text-box h1 {
     font-size: 28px;
   }
+}
 
-  .cta h1 {
+@media (max-width: 480px) {
+  h1 {
     font-size: 24px;
+  }
+
+  .hero-btn {
+    font-size: 14px;
+    padding: 10px 24px;
+  }
+
+  .testimonials-col {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .testimonials-col img {
+    margin-bottom: 10px;
   }
 }
