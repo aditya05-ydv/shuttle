@@ -1,4 +1,4 @@
-<html>
+<!--<html>
     <head>
         <meta name="viewport" content="with=device-width, intial-scale=1.0">
         <title>Badminton website Design</title>
@@ -34,7 +34,7 @@
 
     </section>
 
-    <!----course---->
+    
     <section class="course">
         <h1>Course We Offer</h1>
         <p> For begginers, For State & National Level players, Fitness Enthusiasts . </p>
@@ -161,7 +161,6 @@
 
 
 
-    <!-----javascript for menu----->
 <script>
    var navLinks = document.getElementById("navLinks");
    
@@ -175,4 +174,139 @@
 
 
             </body>
-            </html>
+            </html> -->
+
+            <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC Badminton Academy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html" class="logo"><img src="fotor-20250123151245.png" alt="Logo"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="course.html">Courses</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="text-box">
+            <h1>ABC Badminton Academy</h1>
+            <p>Step into excellence at ABC Badminton Academy — where every smash, drop, and victory begins!<br>Experience expert coaching, personalized training. Let’s turn your badminton dreams into reality.</p>
+            <a href="#" class="hero-btn">Visit Us To Know More</a>
+        </div>
+    </header>
+
+    <section class="course">
+        <h1>Courses We Offer</h1>
+        <p>Beginner | State & National Level | Fitness Enthusiasts</p>
+        <div class="row">
+            <div class="course-col">
+                <h3>Beginners</h3>
+                <p>Learn the fundamentals: grip, stance, footwork and more. Ideal for newcomers.</p>
+            </div>
+            <div class="course-col">
+                <h3>State and National</h3>
+                <p>Advanced techniques and tournament-level preparation for top-tier players.</p>
+            </div>
+            <div class="course-col">
+                <h3>Fitness Enthusiasts</h3>
+                <p>Improve agility, stamina, and strength through high-energy badminton training.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="academy">
+        <h1>ABC Badminton Academy</h1>
+        <p>Expert coaching, modern facilities, and community-driven sportsmanship for every level.</p>
+        <div class="row">
+            <div class="academy-col"><img src="istockphoto-531930039-612x612.jpg" alt="Court"></div>
+            <div class="academy-col"><img src="istockphoto-1391801570-2048x2048.jpg" alt="Training"></div>
+            <div class="academy-col"><img src="istockphoto-1391563486-2048x2048.jpg" alt="Game"></div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <h1>What Our Students Say</h1>
+        <div class="row">
+            <div class="testimonials-col">
+                <img src="user photo 3 - Copy.jpeg" alt="Student 1">
+                <div>
+                    <p>Exceptional training that elevated my skills. The focus on individual improvement is great.</p>
+                    <h3>Daenerys Targaryen</h3>
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonials-col">
+                <img src="user photo 2 - Copy.jpeg" alt="Student 2">
+                <div>
+                    <p>Supportive coaches and a professional environment for serious training and growth.</p>
+                    <h3>Tyrion Lannister</h3>
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonials-col">
+                <img src="usr photo 1.jpeg" alt="Student 3">
+                <div>
+                    <p>Energetic and welcoming academy that brings out the best in every athlete.</p>
+                    <h3>Arya Stark</h3>
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <h1>Enroll In Our Offline & Online Courses Today!</h1>
+        <a href="#" class="hero-btn">Contact Us</a>
+    </section>
+
+    <footer class="footer">
+        <h4>About Us</h4>
+        <p>GGSIPU Indoor Stadium, Dwarka Sector 16, New Delhi</p>
+        <div class="icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-instagram"></i>
+        </div>
+        <p>Made with <i class="fa fa-heart-o"></i></p>
+    </footer>
+
+    <script>
+        const navLinks = document.getElementById("navLinks");
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-250px";
+        }
+    </script>
+</body>
+</html>
